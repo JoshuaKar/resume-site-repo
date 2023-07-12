@@ -3,6 +3,7 @@
     background-color: rgb(100, 100, 100);
     display: flex;
     justify-items: left;
+    justify-content: flex-start;
     flex-direction: row;
     margin-bottom: 0;
     overflow: hidden;
@@ -78,5 +79,6 @@ body{
     background-size: contain;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    display: content;
 }
 
