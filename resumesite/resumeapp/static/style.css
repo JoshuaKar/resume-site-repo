@@ -4,40 +4,79 @@
     display: flex;
     justify-items: left;
     flex-direction: row;
+    margin-bottom: 0;
+    overflow: hidden;
+    z-index: 2;
 }
 .navbar-brand {
-    color:aliceblue;
+    color:white;
     display: flex;
     text-align: center;
     font-size: 27px;
 }
-.navbar-brand:hover, .navbar-brand:visited{
-    color:aliceblue;
-}
-.nav-links{
+.nav-link{
+    color: white;
     list-style-type: none;
     font-size: 30px;
     display: flex;
     padding-left:5px;
 }
+
+a:hover, a:visited{
+    color: white;
+}
+
 .nav-item{
     padding-top: 5px;
     padding-left: 25px;
 }
 
+#background-animation {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    background-size: 100% 100%;
+    background-position: 0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px,0px 0px;
+    background-image: radial-gradient(18% 28% at 24% 50%, #8FFF42FF 7%, #073AFF00 100%),radial-gradient(18% 28% at 18% 71%, #FFFFFF59 6%, #073AFF00 100%),radial-gradient(70% 53% at 36% 76%, #F3FF00FF 0%, #073AFF00 100%),radial-gradient(42% 53% at 15% 94%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(18% 28% at 35% 87%, #FFFFFFFF 7%, #073AFF00 100%),radial-gradient(31% 43% at 7% 98%, #FFFFFFFF 24%, #073AFF00 100%),radial-gradient(21% 37% at 72% 23%, #D3FF6D9C 24%, #073AFF00 100%),radial-gradient(35% 56% at 91% 74%, #8A4FFFF5 9%, #073AFF00 100%),radial-gradient(74% 86% at 67% 38%, #6DFFAEF5 24%, #073AFF00 100%),linear-gradient(125deg, #4EFFECFF 1%, #5200FCFF 38%);border-radius: 50%;
+    z-index: 1;
+  }
+  
+.header-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    object-fit: cover;
+    object-position: top center;
+}
+
+#footer{
+    position: relative;
+    padding-bottom: 10vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    background: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 1);
+    height: 100px;
+    z-index: 3;
+}
+
+
+
+
+
 body{
-    background: rgb(47,47,47);
-background: linear-gradient(210deg, rgb(15, 15, 15) 0%, rgb(31, 31, 31) 48%, rgb(200, 200, 200) 53%, rgba(15,15,15,1) 53%, rgba(168, 255, 151,1) 58%, rgba(168, 255, 151,1) 100%);
-    background-repeat: no-repeat;
-    background-size: auto;
-    height: 2500px;
+    /*background: rgb(47,47,47);
+    background: linear-gradient(210deg, rgb(15, 15, 15) 0%, rgb(31, 31, 31) 48%, rgb(200, 200, 200) 53%, rgba(15,15,15,1) 53%, rgba(168, 255, 151,1) 58%, rgba(168, 255, 151,1) 100%);*/
+    position: relative;
+    background: black;
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    background-size: contain;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
 }
 
-#navItem{
-    color: aliceblue;
-}
-#navItem:hover, #navItem:active{
-    color: rgb(168, 255, 151);
-}
