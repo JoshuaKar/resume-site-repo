@@ -1,5 +1,43 @@
 {% extends 'base.html'%}
 
 {% block content %}
-    I am a loser
+<ul id="skills-wrapper" class="container-flex" style="display:flex">
+    {% for item in skills %}
+    <div id="skills" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div style="display:flex; flex-direction: row; justify-content: space-between">
+            <h1 id="title">{{ item.title }}</h1> 
+            <h2 id="level">{{ item.level }}</h2>  
+        </div>
+        <h2 id="description" style="font-size:x-large;">{{ item.description|linebreaks }}</h2>
+    </div>
+    {% endfor %}
+</ul>
+
+<ul id="education-wrapper" class="container-flex" style="display:flex">
+    {% for item in education %}
+    <div id="education" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <h1 id="title">{{ item.title }}</h1>  
+        <h2 id="location" style="font-size:x-large;">{{ item.location }}</h2>
+    </div>
+
+    <div id="education" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;">
+        <h1 id="status">{{ item.status }}</h1>
+        <h1 id="date">{{ item.date }}</h1>
+    </div>
+    {% endfor %}
+</ul>
+    
+<ul id="work-wrapper" class="container-flex" style="display:flex">
+    {% for item in work %}
+    <div id="skills" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div style="display:flex; flex-direction: row; justify-content: space-between">
+            <h2 id="title">{{ item.title }}</h2> 
+            <h1 id="start-date" style="font-size:large; justify-content: flex-end">{{ item.start_date }}  -  Present</h1>
+        </div>            
+        
+    </div>
+    {% endfor %}
+</ul>
+
+
 {% endblock %}
