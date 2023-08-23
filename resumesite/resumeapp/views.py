@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Education, Skills, Work
+from .models import Education, Skills, Work, Projects
 
 # Create your views here.
 def setup(request):
@@ -18,11 +18,19 @@ def portfolio(request):
         'skills': skill,
         'work': work,
     }
-    print(context)
+    #print(context)
     return render(request, 'portfolio.html', context)
 
 def projects(request):
-    return render(request, 'projects.html')
+    projects = Projects.objects.all()
+    context = {
+        'projects': projects,
+    }
+    return render(request, 'projects.html', context)
+
+def single_project(request, title):
+    project = get_object_or_404(Projects, title=title)
+    return render(request, 'single_project.html', {'project': project})
 
 def links(request):
     return render(request, 'links.html')

@@ -39,4 +39,53 @@
     </h2>
     <p>A self-taught backend webdeveloper based out of Central Texas</p>
   </article>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      // Your existing carousel initialization code
+      $('#myCarousel').carousel();
+    
+      // Function to handle previous button click
+      $('#prevButton').on('click', function () {
+        $('#myCarousel').carousel('prev');
+      });
+    
+      // Function to handle next button click
+      $('#nextButton').on('click', function () {
+        $('#myCarousel').carousel('next');
+      });     
+
+      var carouselInterval = 10000; // 10 seconds
+
+      function scrollCarousel() {
+            $('#myCarousel').carousel('next');
+          }
+      
+      // Start scrolling the carousel automatically
+      var intervalId = setInterval(scrollCarousel, carouselInterval);
+  
+      
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      // Your existing carousel initialization code
+      $('#myCarousel').carousel();
+  
+      // Function to handle previous button click
+      $('#prevButton').on('click', function (event) {
+        event.preventDefault();
+        $('#myCarousel').carousel('prev');
+      });
+  
+      // Function to handle next button click
+      $('#nextButton').on('click', function (event) {
+        event.preventDefault();
+        $('#myCarousel').carousel('next');
+      });
+    });
+  </script>
+
 {% endblock %}

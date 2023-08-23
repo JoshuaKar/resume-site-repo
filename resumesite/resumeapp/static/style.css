@@ -56,6 +56,27 @@ a:hover, a:visited{
     margin-bottom: 5vh;
 }
 
+#projectCarousel{
+    width: 33vw;
+}
+
+#project-about{
+    background-color: rgba(128, 128, 128, 0.25);
+    padding: 1vw;
+    margin-left: 10vw;
+    margin-top: 20vh;
+    font-style: oblique;
+    font-variant: small-caps;
+}
+.carousel-caption{
+    font-style: oblique;
+    font-variant: small-caps;
+}
+
+#project-description{
+    font-size: larger;
+}
+
 #footer, #about-block{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;

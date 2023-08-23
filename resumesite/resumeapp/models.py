@@ -26,3 +26,14 @@ class Work(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Projects(models.Model):
+    title = models.CharField(max_length=200, default="project")
+    title_description = models.CharField(max_length=200)
+    long_description = models.CharField(max_length=1000)
+    gallery_top = models.ImageField()
+    gallery_2 = models.ImageField()
+    gallery_3 = models.ImageField()
+    
+    def __str__(self):
+        return self.title
