@@ -2,8 +2,25 @@
 
 {% block content %}
 {% load static%}
+<style>
+  @media (max-width: 1024px) {
+    #project-single-wrapper{
+      flex-direction:column !important;
+    }
+    #projectCarousel{
+        width:auto;
+        max-width:100%;
+        margin: auto;
+        height:100%;
+        width:800px;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+      
+  }
+</style>
 <!-- Project Carousel -->
-<article style="display: flex; flex-direction: row; align-items: flex-start;">
+<article id="project-single-wrapper" style="display: flex; flex-direction: row; align-items: flex-start;">
 <div id="projectCarousel" class="carousel slide rounded-bottom border-bottom" data-bs-ride="carousel">
     <div id="project-carousel" class="carousel-inner">
       <div class="carousel-item active">
@@ -17,7 +34,7 @@
       </div>
     </div>
     <div class="carousel-caption">
-        <h3 id="project-description">{{project.title_description}}</h3>
+        <h3 id="project-description">{{project.title_description|linebreaks}}</h3>
     </div>
     <a class="carousel-control-prev" href="#projectCarousel" role="button" data-bs-slide="prev" id="prevButton">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -28,9 +45,9 @@
       <span class="visually-hidden"></span>
     </a>
 </div>
-    <p id="project-about" style="display: flex; flex-direction: row; align-items: flex-start;"> 
-        {{project.long_description}}
-    </p>
+    <ul id="project-about" style="display: flex; flex-direction: column; align-items: flex-start; margin-right: 3vw;"> 
+        {{project.long_description|linebreaks}}
+    </ul>
 </article>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

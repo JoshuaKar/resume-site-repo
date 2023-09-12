@@ -1,9 +1,32 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<ul id="skills-wrapper" class="container-flex" style="display:flex">
+<style>
+    @media (max-width: 768px) {
+        #about-block {
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center align elements vertically */
+        }
+    
+        h2 {
+            text-align: center; /* Center align the content inside h2 */
+            font-size: large !important;
+        }
+        h1 {
+            font-size: larger !important; /* Adjust the font size as needed */
+        }
+        h3 {
+            font-size: medium !important; /* Adjust the font size as needed */
+        }
+        p {
+            font-size: small !important; /* Adjust the font size as needed */
+        }
+    }
+</style>
+<ul id="skills-wrapper" class="container-flex" style="display:flex; flex-direction: column;">
+    <h1 id="header" style="font-size:xxx-large">Relevant Skills and Experience</h1> 
     {% for item in skills %}
-    <div id="skills" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+    <div id="skills" style="flex: 1; display: flex; flex-direction: column; justify-content: center">
         <div style="display:flex; flex-direction: row; justify-content: space-between">
             <h1 id="title">{{ item.title }}</h1> 
             <h2 id="level">{{ item.level }}</h2>  
@@ -13,28 +36,32 @@
     {% endfor %}
 </ul>
 
-<ul id="education-wrapper" class="container-flex" style="display:flex">
+<ul id="education-wrapper" class="container-flex" style="display:flex;  flex-direction: column;">
+    <h1 id="header" style="font-size:xxx-large">Education and Certifications</h1> 
     {% for item in education %}
-    <div id="education" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-        <h1 id="title">{{ item.title }}</h1>  
-        <h2 id="location" style="font-size:x-large;">{{ item.location }}</h2>
-    </div>
-
-    <div id="education" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;">
-        <h1 id="status">{{ item.status }}</h1>
-        <h1 id="date">{{ item.date }}</h1>
+    <div id="education" class="row">
+        <div class="col" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+            <h1 id="title">{{ item.title }}</h1>  
+            <h2 id="location" style="font-size:x-large;">{{ item.location }}</h2>
+        </div>    
+        <div class="col" style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-end;">
+                <h1 id="status">{{ item.status }}</h1>
+                <h1 id="date">{{ item.date }}</h1>
+        </div>
     </div>
     {% endfor %}
 </ul>
     
-<ul id="work-wrapper" class="container-flex" style="display:flex">
+<ul id="work-wrapper" class="container-flex" style="display:flex; flex-direction: column;">
+    <h1 id="header" style="font-size:xxx-large">Work Experience</h1> 
     {% for item in work %}
-    <div id="skills" style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
-        <div style="display:flex; flex-direction: row; justify-content: space-between">
-            <h2 id="title">{{ item.title }}</h2> 
-            <h1 id="start-date" style="font-size:large; justify-content: flex-end">{{ item.start_date }}  -  Present</h1>
-        </div>            
-        
+    <div id="jobs" class="row">
+        <div class="col" style="flex: 1; display: flex; flex-direction: row; justify-content: space-between;align-items: baseline; ">
+            <h2 id="title">{{ item.title }}</h2>    
+        </div>
+        <div class="col" style="flex: 1; display: flex; flex-direction: row; justify-content: flex-end;align-items: baseline; ">
+            <h3 id="start-date" style="font-size:large; justify-content: flex-end">{{ item.start_date }}  -  Present</h3>       
+        </div>
     </div>
     {% endfor %}
 </ul>

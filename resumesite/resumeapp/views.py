@@ -1,10 +1,16 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from .models import Education, Skills, Work, Projects
+from .models import Education, Skills, Work, Projects, About
 
 # Create your views here.
 def setup(request):
-    return render(request, 'home.html')
+    about = About.objects.all()
+    projects = Projects.objects.all()
+    context = {
+        'about': about,
+        'projects': projects,
+    }
+    return render(request, 'home.html', context)
 
 def about(request):
     return render(request, 'about.html')

@@ -30,10 +30,18 @@ class Work(models.Model):
 class Projects(models.Model):
     title = models.CharField(max_length=200, default="project")
     title_description = models.CharField(max_length=200)
-    long_description = models.CharField(max_length=1000)
+    long_description = models.TextField(max_length=2500)
     gallery_top = models.ImageField()
     gallery_2 = models.ImageField()
     gallery_3 = models.ImageField()
+    
+    def __str__(self):
+        return self.title
+    
+class About(models.Model):
+    title = models.CharField(max_length=200)
+    introduction = models.TextField(max_length=4000)
+    bio = models.TextField(max_length=20000)
     
     def __str__(self):
         return self.title

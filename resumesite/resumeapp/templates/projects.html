@@ -8,17 +8,18 @@
         <a href="" class="btn btn-primary">More Info</a>
     </div>
   </div>-->
-
-  {% for item in projects %}
-  <div class="card" style="display: flex; width: 20vw">
-    <img class="card-img-top" src="{{item.gallery_top.url}}" alt="Card image cap" height=200 width=200 style="overflow: hidden; max-width:100% ">
-    <div class="card-body"> <p>{{item.title_description}}
-    </p>
-        <a href="{{item.title}}" class="btn btn-primary">More Info</a>
+  <ul id="project-wrapper" class="container-flex" style="display:flex;  flex-direction: row; align-content: flex-end; justify-content: flex-start; flex-wrap: wrap;margin-bottom: 50vh;">
+    {% for item in projects %}
+    <div class="card" style="display: flex; width: 20vw">
+      <img class="card-img-top" src="{{item.gallery_top.url}}" alt="Card image cap" height=200 width=200 style="overflow: hidden; max-width:100% ">
+      <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between"> <p>{{item.title_description}}
+      </p>
+          <a href="{{item.title}}" class="btn btn-primary">More Info</a>
+      </div>
     </div>
-  </div>
 
     {% endfor %}
+  </ul>
 
   {% endblock %}
   
