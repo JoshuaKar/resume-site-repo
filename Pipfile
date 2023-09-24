@@ -6,8 +6,7 @@ name = "pypi"
 [packages]
 django = "*"
 pillow = "*"
-boto3 = "*"
-django-storages = "*"
+whitenoise = "*"
 
 [dev-packages]
 
