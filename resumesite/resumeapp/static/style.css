@@ -1,4 +1,15 @@
 /*Clean up references, the base.html file uses this styling for every template. Reference navbar objects*/
+::-webkit-scrollbar {
+    background: #000;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(24, 26, 27) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:rgb(44, 47, 49) !important;
+}
+
 .navbar{
     background-color: rgb(44, 47, 49) !important;
     display: flex;
@@ -21,7 +32,7 @@
     padding-left:5px;
 }
 
-a:hover, a:visited{
+a:hover, a:visited, a:link{
     color: white;
 }
 
@@ -150,7 +161,7 @@ h2, h1{
     height: 100%;
 }
 #name, #location, #status, #date{
-    margin-right:5vw;
+    margin-right:2vw;
     margin-bottom: 0px;
     padding-top: 0px;
 }
@@ -158,22 +169,35 @@ h2, h1{
     font-size: 2rem;
     font-style: italic;
 }
+#title, #level{
+    font-family:   Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
+    font-style: normal;
+    max-width: 66vw;
+}
 #level{
-    font-size:3rem;
+    font-size:2.3rem;
+    font-style: italic;
 }
 #title{
-    width: 66vw;
+    font-size: 3rem;
 }
 #description{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:  Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans'  ;
     font-style: normal;
-    font-weight: 100;
+    font-variant: normal;
+
 }
 #date{
     font-size: large;
 }
 #level, #start-date{
-    margin-right: 5vw;
+    margin-right: 2vw;
+}
+#start-date{
+    font-family:   Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
+    font-style: italic;
+    font-size: larger;
+    padding: 2vw;
 }
 .row, .col {
     margin-right: 0;
@@ -188,6 +212,7 @@ h2, h1{
 }
 
 .card{
+    color: whitesmoke;
     background-color: rgb(24, 26, 27);
     width: 20rem !important;
     margin-top: 3vh;
@@ -203,7 +228,7 @@ h2, h1{
 
 #project-about{
     font-size: x-large;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:   Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
     font-variant: normal;
     color: whitesmoke;
     margin-top: 2vh;
@@ -214,19 +239,14 @@ h2, h1{
 }
 
 
-
 body{
     background-size: 100% 100%;
     background-position: 0px 0px,0px 0px;
     background-image: radial-gradient(75% 75% at 50% 50%, rgba(30, 83, 160, 0.55) 2%, rgba(0, 41, 200, 0) 100%), radial-gradient(75% 75% at 50% 50%, rgb(46, 125, 0) 0%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
     position: relative;
     width: 100vw;
+    max-width: fit-content;
     height: 100%;
     background-size: contain;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: large;
-    display: content;
 }
-
-
-
