@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 pillow = "*"
 whitenoise = "*"
-gunicorn = "*"
+django-sslserver = "*"
 
 [dev-packages]
 
