@@ -27,9 +27,8 @@ with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['joshuakarischdev.net', '3.20.76.58']
 
-SSL_ENABLED = True
 # Application definition
 
 INSTALLED_APPS = [
