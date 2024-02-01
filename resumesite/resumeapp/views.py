@@ -12,6 +12,9 @@ def setup(request):
     }
     return render(request, 'home.html', context)
 
+def health_check(request):
+    return HttpResponse("OK", status=200)
+
 def about(request):
     return render(request, 'about.html')
 
