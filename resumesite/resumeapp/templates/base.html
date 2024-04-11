@@ -15,12 +15,12 @@
 
 
   </head>
-  <body>
+  <body style="background-image: radial-gradient(75% 75% at 50% 50%, rgba(30, 83, 160, 0.55) 2%, rgba(0, 41, 200, 0) 100%), radial-gradient(75% 75% at 50% 50%, rgb(46, 125, 0) 0%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);">
    
     
     <!-- COLLAPSING NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-bottom border-bottom border-dark">
-      <div class="navbar-brand">Joshua Karisch</div>
+      <div class="navbar-brand"></div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +29,7 @@
               <div class="nav-link"><a href="/">Home</a></div>
               <div class="nav-link"><a href="/portfolio">Resume</a></div>
               <div class="nav-link"><a href="/projects">Projects</a></div>
-              <div class="nav-link"><a href="/about">About</a></div>
+              <!--<div class="nav-link"><a href="/about">About</a></div>-->
           </div>
       </div>
   </nav>
@@ -39,9 +39,9 @@
       {% endblock %}
 
   <footer class="container-flex" id="footer">
-    <img src="{% static 'bootstrap.png' %}" id="toe">
-    <img src="{% static 'django.png' %}" id="toe">
-    <img src="{% static 'aws.png' %}" id="toe">
+      <img src="{% static 'bootstrap.png' %}" id="toe">
+      <img src="{% static 'django.png' %}" id="toe">
+      <img src="{% static 'aws.png' %}" id="toe">
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

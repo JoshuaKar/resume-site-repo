@@ -67,13 +67,15 @@ a:hover, a:visited, a:link{
     margin-bottom: 5vh;
 }
 
-#project-about{
+#project-about{    
+    font-size: x-large;
+    font-family:   'Roboto',Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
+    font-variant: normal;
+    color: whitesmoke;
     background-color: rgba(128, 128, 128, 0.25);
     padding: 1vw;
-    margin-left: 10vw;
-    margin-top: 20vh;
-    font-style: oblique;
-    font-variant: small-caps;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 .carousel-caption{
     font-style: oblique;
@@ -82,6 +84,7 @@ a:hover, a:visited, a:link{
 
 #project-description{
     font-size: larger;
+    margin-right: 3vw;
 }
 
 #footer, #about-block{
@@ -102,12 +105,13 @@ a:hover, a:visited, a:link{
     left: 0;
     width: 95vw;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content:left;
     align-items: center;
 }
 
 h3{
     margin-left: 2vw;
+    margin-right:2vw;
     font-size: large;
 }
 #toe {
@@ -124,18 +128,48 @@ h3{
     height: auto;
     margin-bottom: 7vh;
 }
-
-#link, #link:hover, #link:visited{
-    color: white;
+@media (max-width: 1024px) {
+    #about-block {
+        flex-direction: column;
+        align-items: center; 
+    }
 }
 
+.linkedin-button, .github-button,.pdf-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #0077B5; /* LinkedIn blue */
+  }
+  
+  .github-button {
+    background-color: #333; /* GitHub dark gray */
+  }
+  .pdf-button {
+    background-color: #d32f2f;
+  }
+  
+  .linkedin-button:hover {
+    background-color: #005f91; /* Darker shade of LinkedIn blue */
+  }
+  .github-button:hover {
+    background-color: #282828; /* Darker shade of LinkedIn blue */
+  }
+  .pdf-button:hover {
+    background-color: #cc0000; /* Darker shade of the PDF button color */
+  }
 h2, h1{
     padding-top: 1vh;
     padding-left: 2vw;
     padding-right: 2vw;
     padding-bottom: 1vh;
-    font-style: oblique;
-    font-variant: small-caps;
 }
 
 #education, #skills, #header, #jobs{
@@ -145,6 +179,7 @@ h2, h1{
     width: auto;
 }
 #header {
+    font-family: 'Roboto';
     background-color: rgba(128, 128, 128, 0.75);
     width: 100%;
 }
@@ -157,7 +192,8 @@ h2, h1{
     margin-right: 2vw;
 }
 #projectCarousel{
-    width: 200vw;
+    margin-left: 2vw;
+    width: 100vw;
     height: 100%;
 }
 #name, #location, #status, #date{
@@ -165,12 +201,15 @@ h2, h1{
     margin-bottom: 0px;
     padding-top: 0px;
 }
+#location, #start-date, #date{
+    color:gainsboro;
+}
 #status{
     font-size: 2rem;
     font-style: italic;
 }
 #title, #level{
-    font-family:   Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
+    font-family:  Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
     font-style: normal;
     max-width: 66vw;
 }
@@ -180,9 +219,11 @@ h2, h1{
 }
 #title{
     font-size: 3rem;
+    font-family: 'Roboto';
 }
 #description{
     font-family:  Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans'  ;
+    color:gainsboro;
     font-style: normal;
     font-variant: normal;
 
@@ -208,17 +249,14 @@ h2, h1{
     padding-right: 0;
 }
 .col{
-    max-width: 55%;
+    max-width: auto;
 }
 
 .card{
     color: whitesmoke;
     background-color: rgb(24, 26, 27);
     width: 20rem !important;
-    margin-top: 3vh;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-bottom: 3vh;
+    margin: 2vw;
 }
 
 #card-img-top{
@@ -227,26 +265,20 @@ h2, h1{
 }
 
 #project-about{
-    font-size: x-large;
-    font-family:   Arial, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans' ;
-    font-variant: normal;
-    color: whitesmoke;
     margin-top: 2vh;
     margin-left: 4vw;
+    margin-right: 4vw;
 }
-#project-single-wrapper{
-    margin-bottom: 20vh;
-}
-
 
 body{
     background-size: 100% 100%;
     background-position: 0px 0px,0px 0px;
-    background-image: radial-gradient(75% 75% at 50% 50%, rgba(30, 83, 160, 0.55) 2%, rgba(0, 41, 200, 0) 100%), radial-gradient(75% 75% at 50% 50%, rgb(46, 125, 0) 0%, rgb(0, 0, 0) 98%, rgba(0, 0, 0, 0) 100%);
+    
     position: relative;
     width: 100vw;
     max-width: fit-content;
     height: 100%;
     background-size: contain;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:'Roboto';
 }
+
